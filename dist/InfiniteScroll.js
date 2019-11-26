@@ -156,12 +156,11 @@ var InfiniteScroll = (function(_Component) {
       value: function eventListenerOptions() {
         var options = this.props.useCapture;
 
-        if (this.isPassiveSupported()) {
-          options = {
-            useCapture: this.props.useCapture,
-            passive: true
-          };
-        }
+        options = {
+          useCapture: this.props.useCapture,
+          passive: true
+        };
+        
         return options;
       }
 
