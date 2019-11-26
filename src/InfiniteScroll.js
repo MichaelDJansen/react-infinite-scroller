@@ -84,16 +84,11 @@ export default class InfiniteScroll extends Component {
   eventListenerOptions() {
     let options = this.props.useCapture;
 
-    if (this.isPassiveSupported()) {
-      options = {
-        useCapture: this.props.useCapture,
-        passive: true
-      };
-    } else {
-      options = {
-        passive: false
-      };
-    }
+    options = {
+      useCapture: this.props.useCapture,
+      passive: true
+    };
+    
     return options;
   }
 
